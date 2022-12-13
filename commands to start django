@@ -1,0 +1,29 @@
+
+python crash course
+sudo apt install python3-pip
+pip install virtualenv
+virtualenv --version
+
+source venv/bin/activate
+
+pip install django
+python -m django --version
+django-admin startproject mysite .
+python manage.py runserver
+
+python manage.py starapp blog
+
+python manage.py makemigrations
+python manage.py migrate
+
+python manage.py shell
+
+rom myapp.models import Project, Task
+p = Project(name="aplicacion movil")
+p.save()
+Project.objects.all()
+Project.objects.get(id=1)
+
+Project.objects.filter(name__startswith="aplicacion")
+
+python manage.py createsupeser

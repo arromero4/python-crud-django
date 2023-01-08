@@ -9,16 +9,13 @@
 </head>
 <body>
     {% block content %}
-    <h1>Create Task</h1>
-    {{error}}
-    <form action="/tasks/create/" method="post">
-        {% csrf_token %}
-
-        {{form.as_p}}
-        <button>
-            Create!
-        </button>
-    </form>
+   <h1>{{task.title}}</h1>
+   {{error}}
+   <form method="POST">
+    {% csrf_token %}
+    {{form.as_p}}
+    <button>Update</button>
+   </form>
     {% endblock %}
 </body>
 </html>
